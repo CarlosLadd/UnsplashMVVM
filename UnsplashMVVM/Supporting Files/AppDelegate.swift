@@ -14,6 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        _ = DIContainer.shared
+        
+        if #available(iOS 13.0, *) {
+            // Use UISceneDelegate
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let navigationHandler: NavigationHandlerProtocol = DIContainer.shared.resolve()
+            navigationHandler.initialTransition(from: window)
+        }
+        
         return true
     }
 
