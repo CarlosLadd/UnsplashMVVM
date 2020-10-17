@@ -13,7 +13,8 @@ class SceneAssembly: Assembly {
     
     func assemble(container: Container) {
         let assemblies: [Assembly] = [
-            DashboardAssembly()
+            DashboardAssembly(),
+            ProfileAssembly()
         ]
         
         assemblies.forEach { $0.assemble(container: container) }

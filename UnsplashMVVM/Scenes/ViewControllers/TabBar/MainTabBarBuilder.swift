@@ -12,15 +12,23 @@ final class MainTabBarBuilder {
     
     class func buildViewCoordinators() -> [Coordinator] {
         
+        // Dashboard
         let dashboardNavigationController = createNavigationController(
             title: "Dashboard",
             image: #imageLiteral(resourceName: "icon-dashboard"))
         let dashboardCoordinator = DashboardCoordinator(navigationController: dashboardNavigationController)
-        
         dashboardCoordinator.start()
         
+        // Profile
+        let profileNavigationController = createNavigationController(
+            title: "Profile",
+            image: #imageLiteral(resourceName: "icon-profile"))
+        let profileCoordinator = ProfileCoordinator(navigationController: profileNavigationController)
+        profileCoordinator.start()
+        
         return [
-            dashboardCoordinator
+            dashboardCoordinator,
+            profileCoordinator
         ]
         
     }

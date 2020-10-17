@@ -31,6 +31,11 @@
 		86A553B2253AA6AC0055FC71 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553B1253AA6AC0055FC71 /* Bindable.swift */; };
 		86A553B4253AA8110055FC71 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553B3253AA8110055FC71 /* DashboardViewModel.swift */; };
 		86A553B7253AA9E00055FC71 /* DashboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553B6253AA9E00055FC71 /* DashboardAssembly.swift */; };
+		86A553B9253AAD320055FC71 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553B8253AAD320055FC71 /* ProfileAssembly.swift */; };
+		86A553BB253AAD7E0055FC71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553BA253AAD7E0055FC71 /* ProfileViewController.swift */; };
+		86A553BD253AADCF0055FC71 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553BC253AADCF0055FC71 /* ProfileCoordinator.swift */; };
+		86A553BF253AAEAF0055FC71 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553BE253AAEAF0055FC71 /* ProfileProtocols.swift */; };
+		86A553C1253AAEEB0055FC71 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553C0253AAEEB0055FC71 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		86A553B1253AA6AC0055FC71 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		86A553B3253AA8110055FC71 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		86A553B6253AA9E00055FC71 /* DashboardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAssembly.swift; sourceTree = "<group>"; };
+		86A553B8253AAD320055FC71 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		86A553BA253AAD7E0055FC71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		86A553BC253AADCF0055FC71 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		86A553BE253AAEAF0055FC71 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		86A553C0253AAEEB0055FC71 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		9756DBF58D488C20B4E3F8CF /* Pods-UnsplashMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFDBBD19E5662EEEB73CD79A /* Pods-UnsplashMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C16894DF6610DBC52074490D /* Pods_UnsplashMVVM_UnsplashMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnsplashMVVM_UnsplashMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,8 +234,6 @@
 			children = (
 				86A55390253A849F0055FC71 /* ViewComponents */,
 				86A55391253A849F0055FC71 /* ViewControllers */,
-				86A5538F253A849F0055FC71 /* ViewModels */,
-				86A55392253A849F0055FC71 /* Views */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -237,15 +245,6 @@
 				86A5539F253A9AC60055FC71 /* Protocols */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		86A5538F253A849F0055FC71 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				86A55396253A84DF0055FC71 /* Dashboard */,
-				86A55395253A84DF0055FC71 /* Profile */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		86A55390253A849F0055FC71 /* ViewComponents */ = {
@@ -265,16 +264,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		86A55392253A849F0055FC71 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		86A55393253A84C20055FC71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				86A553BA253AAD7E0055FC71 /* ProfileViewController.swift */,
+				86A553BC253AADCF0055FC71 /* ProfileCoordinator.swift */,
+				86A553BE253AAEAF0055FC71 /* ProfileProtocols.swift */,
+				86A553C0253AAEEB0055FC71 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -286,20 +282,6 @@
 				86A553AB253AA3770055FC71 /* DashboardCoordinator.swift */,
 				86A553AF253AA62F0055FC71 /* DashboardProtocols.swift */,
 				86A553B3253AA8110055FC71 /* DashboardViewModel.swift */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		86A55395253A84DF0055FC71 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		86A55396253A84DF0055FC71 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -345,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				86A553B6253AA9E00055FC71 /* DashboardAssembly.swift */,
+				86A553B8253AAD320055FC71 /* ProfileAssembly.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -599,13 +582,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A553A4253A9B4B0055FC71 /* NavigationHandler.swift in Sources */,
+				86A553B9253AAD320055FC71 /* ProfileAssembly.swift in Sources */,
 				86A553AC253AA3770055FC71 /* DashboardCoordinator.swift in Sources */,
 				86A5535E253A7FDC0055FC71 /* DashboardViewController.swift in Sources */,
 				86A553A8253A9F440055FC71 /* Coordinator.swift in Sources */,
 				86A55399253A91570055FC71 /* MainTabBarViewController.swift in Sources */,
+				86A553C1253AAEEB0055FC71 /* ProfileViewModel.swift in Sources */,
+				86A553BB253AAD7E0055FC71 /* ProfileViewController.swift in Sources */,
 				86A553B2253AA6AC0055FC71 /* Bindable.swift in Sources */,
 				86A553B4253AA8110055FC71 /* DashboardViewModel.swift in Sources */,
 				86A553A6253A9BB40055FC71 /* HandlerAssembly.swift in Sources */,
+				86A553BD253AADCF0055FC71 /* ProfileCoordinator.swift in Sources */,
 				86A5539E253A972C0055FC71 /* SceneAssembly.swift in Sources */,
 				86A553AA253A9F980055FC71 /* MainTabBarBuilder.swift in Sources */,
 				86A553B7253AA9E00055FC71 /* DashboardAssembly.swift in Sources */,
@@ -614,6 +601,7 @@
 				86A553A1253A9AD90055FC71 /* NavigationHandlerProtocol.swift in Sources */,
 				86A5535C253A7FDC0055FC71 /* SceneDelegate.swift in Sources */,
 				86A553B0253AA62F0055FC71 /* DashboardProtocols.swift in Sources */,
+				86A553BF253AAEAF0055FC71 /* ProfileProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
