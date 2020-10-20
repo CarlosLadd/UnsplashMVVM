@@ -19,7 +19,9 @@ final class SimpleCollectionViewDataSource<ViewModel>: NSObject, UICollectionVie
     
     // MARK: - Initializers
     
-    init(cellViewModels: [ViewModel], reuseIdentifier: String, cellConfigurator: @escaping CellConfigurator) {
+    init(cellViewModels: [ViewModel],
+         reuseIdentifier: String,
+         cellConfigurator: @escaping CellConfigurator) {
         self.cellViewModels = cellViewModels
         self.reuseIdentifier = reuseIdentifier
         self.cellConfigurator = cellConfigurator

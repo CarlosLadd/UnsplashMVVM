@@ -44,8 +44,9 @@ DashboardCollectionViewCellProtocol {
         guard let viewModel = viewModel else { return }
         
         if let coverURL = viewModel.coverURL {
-            let imageURL = URL(string: coverURL)
-            self.coverImageView.setImage(with: imageURL)
+            if let imageView = self.coverImageView {
+                imageView.setImage(with: coverURL)
+            }
         }
     }
     

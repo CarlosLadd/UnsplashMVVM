@@ -53,6 +53,8 @@ extension NLEndpoint {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
+        print("TARGET URL: \(String(describing: request.url?.absoluteString))")
+        
         if let headers = headers {
             for (key, value) in headers {
                 request.setHeader(for: key, with: value)

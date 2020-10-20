@@ -46,10 +46,12 @@ class DashboardViewController: UIViewController {
     private func setupCollectionView() {
         let previewLayoutWidth = previewCellHeight / imageAspectRatio
         let previewLayout = VerticalFlowLayout(width: previewLayoutWidth, height: previewCellHeight)
+        previewLayout.scrollDirection = .vertical
         
         collectionView = UICollectionView(
-            frame: CGRect(x: 0, y: 0, width: view.bounds.height, height: view.bounds.height),
+            frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height),
             collectionViewLayout: previewLayout)
+        collectionView.isScrollEnabled = true
         collectionView.backgroundColor = .white
         collectionView.isPrefetchingEnabled = true
         collectionView.delegate = self
@@ -79,12 +81,17 @@ class DashboardViewController: UIViewController {
     // MARK: - Current State of the view
     
     private func configureView(withState  state: ListViewState<DLImage>) {
+        let backgroundView = UIView(frame: self.view.bounds)
+        
         switch state {
         case .populated, .paging, .initial:
-            collectionView.backgroundView = UIView(frame: .zero)
+            backgroundView.backgroundColor = .clear
+            collectionView.backgroundView = backgroundView
         case .empty:
+            backgroundView.backgroundColor = .darkGray
             collectionView.backgroundView = UIView(frame: .zero)
         case .error:
+            backgroundView.backgroundColor = .blue
             collectionView.backgroundView = UIView(frame: .zero)
         }
     }
@@ -122,7 +129,7 @@ extension DashboardViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Code
+        print(#function)
     }
     
 }

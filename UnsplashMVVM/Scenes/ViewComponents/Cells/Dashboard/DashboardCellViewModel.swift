@@ -10,16 +10,16 @@ import Foundation
 
 protocol DashboardCellViewModelProtocol {
     
-    var coverURL: String? { get }
+    var coverURL: URL? { get }
     
 }
 
 final class DashboardCellViewModel: DashboardCellViewModelProtocol {
     
-    let coverURL: String?
+    let coverURL: URL?
     
     init(_ image: DLImage) {
-        coverURL = image.urls.small
+        coverURL = URL(string: image.urls.small)
     }
     
 }

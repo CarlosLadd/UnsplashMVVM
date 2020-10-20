@@ -12,7 +12,7 @@ public struct NLImage: Decodable {
     
     public let id: String
     public let created_at: String
-    public let alt_description: String
+    public let alt_description: String?
     public let urls: NLUrls
     public let likes: Int
     // public let user: NLUser
@@ -42,7 +42,7 @@ extension NLImage: DomainConvertible {
         
         return DLImage(id: id,
                        created_at: created_at,
-                       alt_description: alt_description,
+                       alt_description: alt_description ?? "",
                        urls: urls.asDomain(),
                        likes: likes,
                        user: DLUser(id: "", username: "", name: "", bio: "", twitter_username: "", profile_image: nil, instagram_username: "", total_likes: 0, total_photos: 0))

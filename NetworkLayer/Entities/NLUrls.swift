@@ -10,11 +10,11 @@ import Foundation
 
 public struct NLUrls: Decodable {
     
-    public let raw: String
-    public let full: String
-    public let regular: String
-    public let small: String
-    public let thumb: String
+    public let raw: String?
+    public let full: String?
+    public let regular: String?
+    public let small: String?
+    public let thumb: String?
     
     private enum CodingKeys: String, CodingKey {
         case raw, full, regular, small, thumb
@@ -37,11 +37,11 @@ public struct NLUrls: Decodable {
 extension NLUrls: DomainConvertible {
     
     func asDomain() -> DLUrls {
-        return DLUrls(raw: raw,
-                      full: full,
-                      regular: regular,
-                      small: small,
-                      thumb: thumb)
+        return DLUrls(raw: raw ?? "",
+                      full: full ?? "",
+                      regular: regular ?? "",
+                      small: small ?? "",
+                      thumb: thumb ?? "")
     }
     
 }
