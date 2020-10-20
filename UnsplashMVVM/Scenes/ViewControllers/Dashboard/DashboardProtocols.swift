@@ -8,9 +8,14 @@
 
 import UIKit
 
+// MARK: - View Model Protocol
+
 protocol DashboardViewModelProtocol {
     
+    var viewState: Bindable<ListViewState<DLImage>> { get set }
     var startLoading: Bindable<Bool> { get set }
+    
+    var imageCells: [DashboardCellViewModelProtocol] { get }
     var needsPrefetch: Bool { get }
     
     func getImages()
@@ -18,8 +23,19 @@ protocol DashboardViewModelProtocol {
     
 }
 
+// MARK: - Coordinator Protocol
+
 protocol DashboardCoordinatorProtocol: class {
     
     func showImageDetail()
+    
+}
+
+// MARK: - Interactor Protocol
+
+protocol DashboardInteractorProtocol {
+    
+    func getImages(page: Int,
+                   completion: @escaping (Result<[DLImage], Error>) -> Void)
     
 }

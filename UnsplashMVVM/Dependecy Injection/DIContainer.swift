@@ -22,6 +22,8 @@ class DIContainer {
     init() {
         assembler = Assembler(
             [
+                DataSourceAssembly(),
+                ProviderAssembly(),
                 HandlerAssembly(),
                 SceneAssembly()
             ],

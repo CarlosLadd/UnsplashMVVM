@@ -13,13 +13,13 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     // MARK: Initializers
     
     init() {
-        print("ProfileViewModel Init")
+        // Code
     }
     
     // MARK: - Actionable
     
     func getProfileData() {
-        print("Obtener información del perfil")
+        // Code
     }
     
 }

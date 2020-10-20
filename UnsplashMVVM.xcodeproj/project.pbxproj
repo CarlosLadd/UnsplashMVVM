@@ -36,6 +36,42 @@
 		86A553BD253AADCF0055FC71 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553BC253AADCF0055FC71 /* ProfileCoordinator.swift */; };
 		86A553BF253AAEAF0055FC71 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553BE253AAEAF0055FC71 /* ProfileProtocols.swift */; };
 		86A553C1253AAEEB0055FC71 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A553C0253AAEEB0055FC71 /* ProfileViewModel.swift */; };
+		86F29C48253DF5760009A80E /* DashboardImagePreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F29C47253DF5760009A80E /* DashboardImagePreviewCollectionViewCell.xib */; };
+		86F29C4A253DF6650009A80E /* DashboardImagePreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C49253DF6650009A80E /* DashboardImagePreviewCollectionViewCell.swift */; };
+		86F29C4D253DF9D80009A80E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C4C253DF9D80009A80E /* UICollectionView+Extensions.swift */; };
+		86F29C4F253DFA0E0009A80E /* Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C4E253DFA0E0009A80E /* Dequeuable.swift */; };
+		86F29C52253DFD7A0009A80E /* ListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C51253DFD7A0009A80E /* ListViewState.swift */; };
+		86F29C59253DFEA10009A80E /* DLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C58253DFEA10009A80E /* DLImage.swift */; };
+		86F29C5B253DFF930009A80E /* DLUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C5A253DFF930009A80E /* DLUrls.swift */; };
+		86F29C5D253E009E0009A80E /* DLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C5C253E009E0009A80E /* DLUser.swift */; };
+		86F29C5F253E01380009A80E /* DLProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C5E253E01380009A80E /* DLProfileImage.swift */; };
+		86F29C61253E02DA0009A80E /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C60253E02DA0009A80E /* DashboardInteractor.swift */; };
+		86F29C63253E040C0009A80E /* DLImageUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C62253E040C0009A80E /* DLImageUseCaseProtocol.swift */; };
+		86F29C65253E04B00009A80E /* DLUseCaseProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C64253E04B00009A80E /* DLUseCaseProviderProtocol.swift */; };
+		86F29C68253E121C0009A80E /* VerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C67253E121C0009A80E /* VerticalFlowLayout.swift */; };
+		86F29C6B253E31760009A80E /* PLUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C6A253E31760009A80E /* PLUseCaseProvider.swift */; };
+		86F29C6E253E323A0009A80E /* PLRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C6D253E323A0009A80E /* PLRemoteDataSourceProtocol.swift */; };
+		86F29C71253E33180009A80E /* PLImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C70253E33180009A80E /* PLImageRepository.swift */; };
+		86F29C73253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C72253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift */; };
+		86F29C75253E46900009A80E /* ProviderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C74253E46900009A80E /* ProviderAssembly.swift */; };
+		86F29C77253E48E60009A80E /* DataSourceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C76253E48E60009A80E /* DataSourceAssembly.swift */; };
+		86F29C7A253E49E30009A80E /* NLRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C79253E49E30009A80E /* NLRemoteDataSource.swift */; };
+		86F29C7D253E4A650009A80E /* NLImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C7C253E4A650009A80E /* NLImageRemoteDataSource.swift */; };
+		86F29C7F253E4AA60009A80E /* NLAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C7E253E4AA60009A80E /* NLAPIClient.swift */; };
+		86F29C81253E4ACC0009A80E /* NLAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C80253E4ACC0009A80E /* NLAPIError.swift */; };
+		86F29C85253E4B440009A80E /* NLImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C84253E4B440009A80E /* NLImageClient.swift */; };
+		86F29C87253E4FC90009A80E /* NLImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C86253E4FC90009A80E /* NLImageProvider.swift */; };
+		86F29C89253E50340009A80E /* NLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C88253E50340009A80E /* NLEndpoint.swift */; };
+		86F29C8B253E50D80009A80E /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C8A253E50D80009A80E /* URLRequest+Extensions.swift */; };
+		86F29C8D253E517C0009A80E /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C8C253E517C0009A80E /* Dictionary+Extensions.swift */; };
+		86F29C8F253E51990009A80E /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C8E253E51990009A80E /* CharacterSet+Extensions.swift */; };
+		86F29C95253E55B00009A80E /* NLImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C94253E55B00009A80E /* NLImageResult.swift */; };
+		86F29C97253E5A180009A80E /* Descriptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C96253E5A180009A80E /* Descriptable.swift */; };
+		86F29C9A253E61890009A80E /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C99253E61890009A80E /* SimpleCollectionViewDataSource.swift */; };
+		86F29C9C253E62C80009A80E /* DashboardCollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C9B253E62C80009A80E /* DashboardCollectionViewCellProtocol.swift */; };
+		86F29C9E253E654E0009A80E /* DashboardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C9D253E654E0009A80E /* DashboardCellViewModel.swift */; };
+		86F29CA0253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C9F253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift */; };
+		86F29CA2253E698C0009A80E /* DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +128,42 @@
 		86A553BC253AADCF0055FC71 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		86A553BE253AAEAF0055FC71 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		86A553C0253AAEEB0055FC71 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		86F29C47253DF5760009A80E /* DashboardImagePreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardImagePreviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		86F29C49253DF6650009A80E /* DashboardImagePreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardImagePreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		86F29C4C253DF9D80009A80E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		86F29C4E253DFA0E0009A80E /* Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dequeuable.swift; sourceTree = "<group>"; };
+		86F29C51253DFD7A0009A80E /* ListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewState.swift; sourceTree = "<group>"; };
+		86F29C58253DFEA10009A80E /* DLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLImage.swift; sourceTree = "<group>"; };
+		86F29C5A253DFF930009A80E /* DLUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUrls.swift; sourceTree = "<group>"; };
+		86F29C5C253E009E0009A80E /* DLUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUser.swift; sourceTree = "<group>"; };
+		86F29C5E253E01380009A80E /* DLProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLProfileImage.swift; sourceTree = "<group>"; };
+		86F29C60253E02DA0009A80E /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		86F29C62253E040C0009A80E /* DLImageUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLImageUseCaseProtocol.swift; sourceTree = "<group>"; };
+		86F29C64253E04B00009A80E /* DLUseCaseProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUseCaseProviderProtocol.swift; sourceTree = "<group>"; };
+		86F29C67253E121C0009A80E /* VerticalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalFlowLayout.swift; sourceTree = "<group>"; };
+		86F29C6A253E31760009A80E /* PLUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUseCaseProvider.swift; sourceTree = "<group>"; };
+		86F29C6D253E323A0009A80E /* PLRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		86F29C70253E33180009A80E /* PLImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLImageRepository.swift; sourceTree = "<group>"; };
+		86F29C72253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLImageRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		86F29C74253E46900009A80E /* ProviderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderAssembly.swift; sourceTree = "<group>"; };
+		86F29C76253E48E60009A80E /* DataSourceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceAssembly.swift; sourceTree = "<group>"; };
+		86F29C79253E49E30009A80E /* NLRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLRemoteDataSource.swift; sourceTree = "<group>"; };
+		86F29C7C253E4A650009A80E /* NLImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageRemoteDataSource.swift; sourceTree = "<group>"; };
+		86F29C7E253E4AA60009A80E /* NLAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLAPIClient.swift; sourceTree = "<group>"; };
+		86F29C80253E4ACC0009A80E /* NLAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLAPIError.swift; sourceTree = "<group>"; };
+		86F29C84253E4B440009A80E /* NLImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageClient.swift; sourceTree = "<group>"; };
+		86F29C86253E4FC90009A80E /* NLImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageProvider.swift; sourceTree = "<group>"; };
+		86F29C88253E50340009A80E /* NLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLEndpoint.swift; sourceTree = "<group>"; };
+		86F29C8A253E50D80009A80E /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		86F29C8C253E517C0009A80E /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		86F29C8E253E51990009A80E /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
+		86F29C94253E55B00009A80E /* NLImageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImageResult.swift; sourceTree = "<group>"; };
+		86F29C96253E5A180009A80E /* Descriptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptable.swift; sourceTree = "<group>"; };
+		86F29C99253E61890009A80E /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		86F29C9B253E62C80009A80E /* DashboardCollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCellProtocol.swift; sourceTree = "<group>"; };
+		86F29C9D253E654E0009A80E /* DashboardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCellViewModel.swift; sourceTree = "<group>"; };
+		86F29C9F253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourcePrefetching.swift; sourceTree = "<group>"; };
+		86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcePrefetching.swift; sourceTree = "<group>"; };
 		9756DBF58D488C20B4E3F8CF /* Pods-UnsplashMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFDBBD19E5662EEEB73CD79A /* Pods-UnsplashMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C16894DF6610DBC52074490D /* Pods_UnsplashMVVM_UnsplashMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnsplashMVVM_UnsplashMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +215,9 @@
 		86A5534D253A7FDC0055FC71 = {
 			isa = PBXGroup;
 			children = (
+				86F29C69253E314F0009A80E /* PersistenceLayer */,
+				86F29C54253DFE5C0009A80E /* DomainLayer */,
+				86F29C53253DFE5C0009A80E /* NetworkLayer */,
 				86A55358253A7FDC0055FC71 /* UnsplashMVVM */,
 				86A5536F253A7FDF0055FC71 /* UnsplashMVVMTests */,
 				86A5537A253A7FDF0055FC71 /* UnsplashMVVMUITests */,
@@ -241,6 +316,8 @@
 		86A5538E253A84040055FC71 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				86F29C50253DFD6A0009A80E /* Utils */,
+				86F29C4B253DF9C10009A80E /* Extensions */,
 				86A553A2253A9B340055FC71 /* Handlers */,
 				86A5539F253A9AC60055FC71 /* Protocols */,
 			);
@@ -250,6 +327,9 @@
 		86A55390253A849F0055FC71 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				86F29C98253E61740009A80E /* DataSources */,
+				86F29C66253E12090009A80E /* Layout */,
+				86F29C45253DF5230009A80E /* Cells */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -282,6 +362,7 @@
 				86A553AB253AA3770055FC71 /* DashboardCoordinator.swift */,
 				86A553AF253AA62F0055FC71 /* DashboardProtocols.swift */,
 				86A553B3253AA8110055FC71 /* DashboardViewModel.swift */,
+				86F29C60253E02DA0009A80E /* DashboardInteractor.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -301,6 +382,8 @@
 				86A553B5253AA9C80055FC71 /* Scenes */,
 				86A5539D253A972C0055FC71 /* SceneAssembly.swift */,
 				86A553A5253A9BB40055FC71 /* HandlerAssembly.swift */,
+				86F29C74253E46900009A80E /* ProviderAssembly.swift */,
+				86F29C76253E48E60009A80E /* DataSourceAssembly.swift */,
 			);
 			path = DependencyAssemblers;
 			sourceTree = "<group>";
@@ -311,6 +394,8 @@
 				86A553A0253A9AD90055FC71 /* NavigationHandlerProtocol.swift */,
 				86A553A7253A9F440055FC71 /* Coordinator.swift */,
 				86A553B1253AA6AC0055FC71 /* Bindable.swift */,
+				86F29C4E253DFA0E0009A80E /* Dequeuable.swift */,
+				86F29C96253E5A180009A80E /* Descriptable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -330,6 +415,173 @@
 				86A553B8253AAD320055FC71 /* ProfileAssembly.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		86F29C45253DF5230009A80E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C46253DF5440009A80E /* Dashboard */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		86F29C46253DF5440009A80E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C47253DF5760009A80E /* DashboardImagePreviewCollectionViewCell.xib */,
+				86F29C49253DF6650009A80E /* DashboardImagePreviewCollectionViewCell.swift */,
+				86F29C9B253E62C80009A80E /* DashboardCollectionViewCellProtocol.swift */,
+				86F29C9D253E654E0009A80E /* DashboardCellViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		86F29C4B253DF9C10009A80E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C4C253DF9D80009A80E /* UICollectionView+Extensions.swift */,
+				86F29C8A253E50D80009A80E /* URLRequest+Extensions.swift */,
+				86F29C8C253E517C0009A80E /* Dictionary+Extensions.swift */,
+				86F29C8E253E51990009A80E /* CharacterSet+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86F29C50253DFD6A0009A80E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C51253DFD7A0009A80E /* ListViewState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		86F29C53253DFE5C0009A80E /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C93253E55A30009A80E /* FeedResults */,
+				86F29C78253E49CD0009A80E /* DataSources */,
+				86F29C82253E4B200009A80E /* Services */,
+				86F29C7E253E4AA60009A80E /* NLAPIClient.swift */,
+				86F29C80253E4ACC0009A80E /* NLAPIError.swift */,
+				86F29C88253E50340009A80E /* NLEndpoint.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		86F29C54253DFE5C0009A80E /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C56253DFE8B0009A80E /* Entities */,
+				86F29C57253DFE8B0009A80E /* UseCases */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		86F29C56253DFE8B0009A80E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C58253DFEA10009A80E /* DLImage.swift */,
+				86F29C5A253DFF930009A80E /* DLUrls.swift */,
+				86F29C5C253E009E0009A80E /* DLUser.swift */,
+				86F29C5E253E01380009A80E /* DLProfileImage.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		86F29C57253DFE8B0009A80E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C64253E04B00009A80E /* DLUseCaseProviderProtocol.swift */,
+				86F29C62253E040C0009A80E /* DLImageUseCaseProtocol.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86F29C66253E12090009A80E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C67253E121C0009A80E /* VerticalFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		86F29C69253E314F0009A80E /* PersistenceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C6F253E32FC0009A80E /* Repositories */,
+				86F29C6C253E32250009A80E /* DataSources */,
+				86F29C6A253E31760009A80E /* PLUseCaseProvider.swift */,
+			);
+			path = PersistenceLayer;
+			sourceTree = "<group>";
+		};
+		86F29C6C253E32250009A80E /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C6D253E323A0009A80E /* PLRemoteDataSourceProtocol.swift */,
+				86F29C72253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		86F29C6F253E32FC0009A80E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C70253E33180009A80E /* PLImageRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		86F29C78253E49CD0009A80E /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C7B253E4A440009A80E /* Image */,
+				86F29C79253E49E30009A80E /* NLRemoteDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		86F29C7B253E4A440009A80E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C7C253E4A650009A80E /* NLImageRemoteDataSource.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		86F29C82253E4B200009A80E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C83253E4B350009A80E /* Image */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		86F29C83253E4B350009A80E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C84253E4B440009A80E /* NLImageClient.swift */,
+				86F29C86253E4FC90009A80E /* NLImageProvider.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		86F29C93253E55A30009A80E /* FeedResults */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C94253E55B00009A80E /* NLImageResult.swift */,
+			);
+			path = FeedResults;
+			sourceTree = "<group>";
+		};
+		86F29C98253E61740009A80E /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				86F29C99253E61890009A80E /* SimpleCollectionViewDataSource.swift */,
+				86F29C9F253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift */,
+				86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		E5099FB7E03B5361F0E837B8 /* Frameworks */ = {
@@ -451,6 +703,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F29C48253DF5760009A80E /* DashboardImagePreviewCollectionViewCell.xib in Resources */,
 				86A55366253A7FDF0055FC71 /* LaunchScreen.storyboard in Resources */,
 				86A55363253A7FDF0055FC71 /* Assets.xcassets in Resources */,
 				86A55361253A7FDC0055FC71 /* Main.storyboard in Resources */,
@@ -581,25 +834,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F29C4F253DFA0E0009A80E /* Dequeuable.swift in Sources */,
 				86A553A4253A9B4B0055FC71 /* NavigationHandler.swift in Sources */,
 				86A553B9253AAD320055FC71 /* ProfileAssembly.swift in Sources */,
 				86A553AC253AA3770055FC71 /* DashboardCoordinator.swift in Sources */,
+				86F29C77253E48E60009A80E /* DataSourceAssembly.swift in Sources */,
 				86A5535E253A7FDC0055FC71 /* DashboardViewController.swift in Sources */,
+				86F29C95253E55B00009A80E /* NLImageResult.swift in Sources */,
+				86F29C61253E02DA0009A80E /* DashboardInteractor.swift in Sources */,
+				86F29C75253E46900009A80E /* ProviderAssembly.swift in Sources */,
 				86A553A8253A9F440055FC71 /* Coordinator.swift in Sources */,
 				86A55399253A91570055FC71 /* MainTabBarViewController.swift in Sources */,
+				86F29C6B253E31760009A80E /* PLUseCaseProvider.swift in Sources */,
+				86F29C7F253E4AA60009A80E /* NLAPIClient.swift in Sources */,
 				86A553C1253AAEEB0055FC71 /* ProfileViewModel.swift in Sources */,
+				86F29C7A253E49E30009A80E /* NLRemoteDataSource.swift in Sources */,
 				86A553BB253AAD7E0055FC71 /* ProfileViewController.swift in Sources */,
+				86F29CA0253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift in Sources */,
+				86F29C59253DFEA10009A80E /* DLImage.swift in Sources */,
+				86F29C5D253E009E0009A80E /* DLUser.swift in Sources */,
 				86A553B2253AA6AC0055FC71 /* Bindable.swift in Sources */,
 				86A553B4253AA8110055FC71 /* DashboardViewModel.swift in Sources */,
+				86F29C52253DFD7A0009A80E /* ListViewState.swift in Sources */,
+				86F29C63253E040C0009A80E /* DLImageUseCaseProtocol.swift in Sources */,
+				86F29C68253E121C0009A80E /* VerticalFlowLayout.swift in Sources */,
+				86F29CA2253E698C0009A80E /* DataSourcePrefetching.swift in Sources */,
+				86F29C73253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift in Sources */,
+				86F29C8D253E517C0009A80E /* Dictionary+Extensions.swift in Sources */,
+				86F29C65253E04B00009A80E /* DLUseCaseProviderProtocol.swift in Sources */,
+				86F29C8B253E50D80009A80E /* URLRequest+Extensions.swift in Sources */,
+				86F29C6E253E323A0009A80E /* PLRemoteDataSourceProtocol.swift in Sources */,
+				86F29C9C253E62C80009A80E /* DashboardCollectionViewCellProtocol.swift in Sources */,
+				86F29C4A253DF6650009A80E /* DashboardImagePreviewCollectionViewCell.swift in Sources */,
+				86F29C4D253DF9D80009A80E /* UICollectionView+Extensions.swift in Sources */,
 				86A553A6253A9BB40055FC71 /* HandlerAssembly.swift in Sources */,
 				86A553BD253AADCF0055FC71 /* ProfileCoordinator.swift in Sources */,
+				86F29C97253E5A180009A80E /* Descriptable.swift in Sources */,
+				86F29C87253E4FC90009A80E /* NLImageProvider.swift in Sources */,
+				86F29C9E253E654E0009A80E /* DashboardCellViewModel.swift in Sources */,
+				86F29C5B253DFF930009A80E /* DLUrls.swift in Sources */,
 				86A5539E253A972C0055FC71 /* SceneAssembly.swift in Sources */,
+				86F29C7D253E4A650009A80E /* NLImageRemoteDataSource.swift in Sources */,
 				86A553AA253A9F980055FC71 /* MainTabBarBuilder.swift in Sources */,
 				86A553B7253AA9E00055FC71 /* DashboardAssembly.swift in Sources */,
+				86F29C81253E4ACC0009A80E /* NLAPIError.swift in Sources */,
 				86A5539B253A96660055FC71 /* DIContainer.swift in Sources */,
+				86F29C71253E33180009A80E /* PLImageRepository.swift in Sources */,
 				86A5535A253A7FDC0055FC71 /* AppDelegate.swift in Sources */,
+				86F29C9A253E61890009A80E /* SimpleCollectionViewDataSource.swift in Sources */,
+				86F29C8F253E51990009A80E /* CharacterSet+Extensions.swift in Sources */,
+				86F29C85253E4B440009A80E /* NLImageClient.swift in Sources */,
+				86F29C89253E50340009A80E /* NLEndpoint.swift in Sources */,
 				86A553A1253A9AD90055FC71 /* NavigationHandlerProtocol.swift in Sources */,
 				86A5535C253A7FDC0055FC71 /* SceneDelegate.swift in Sources */,
+				86F29C5F253E01380009A80E /* DLProfileImage.swift in Sources */,
 				86A553B0253AA62F0055FC71 /* DashboardProtocols.swift in Sources */,
 				86A553BF253AAEAF0055FC71 /* ProfileProtocols.swift in Sources */,
 			);

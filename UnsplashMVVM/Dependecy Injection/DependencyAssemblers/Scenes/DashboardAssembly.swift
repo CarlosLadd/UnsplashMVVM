@@ -12,8 +12,14 @@ import Swinject
 final class DashboardAssembly: Assembly {
     
     func assemble(container: Container) {
+        container.register(DashboardInteractorProtocol.self) { resolver in
+            let useCaseProvider = resolver.resolve(DLUseCaseProviderProtocol.self)
+            return DashboardInteractor(useCaseProvider: useCaseProvider!)
+        }
+        
         container.register(DashboardViewModelProtocol.self) { resolver in
-            return DashboardViewModel()
+            let interactor = resolver.resolve(DashboardInteractorProtocol.self)
+            return DashboardViewModel(interactor: interactor!)
         }
     }
     
