@@ -24,16 +24,14 @@ class NLImageClient: NLAPIClient {
     // MARK: - Images
     
     func getImages(page: Int,
-                   completion: @escaping (Result<[DLImage]?, NLAPIError>) -> Void) {
+                   completion: @escaping (Result<[NLImage]?, NLAPIError>) -> Void) {
         let request = NLImageProvider.getImages(page: page).request
         
-        print("Hello Images")
-        
-        /*fetch(with: request, decode: { json -> [DLImage] in
-            guard let imageResult = json as? [DLImage] else { return }
+        fetch(with: request, decode: { json -> [NLImage]?? in
+            guard let imageResult = json as? [NLImage] else { return nil }
             return imageResult
             
-        }, completion: completion)*/
+        }, completion: completion)
     }
     
 }

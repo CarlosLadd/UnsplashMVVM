@@ -72,6 +72,12 @@
 		86F29C9E253E654E0009A80E /* DashboardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C9D253E654E0009A80E /* DashboardCellViewModel.swift */; };
 		86F29CA0253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29C9F253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift */; };
 		86F29CA2253E698C0009A80E /* DataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */; };
+		86F68B80253F24980018360A /* NLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B7F253F24980018360A /* NLImage.swift */; };
+		86F68B82253F2C3A0018360A /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B81253F2C3A0018360A /* DomainConvertible.swift */; };
+		86F68B84253F2F570018360A /* NLUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B83253F2F570018360A /* NLUrls.swift */; };
+		86F68B86253F318A0018360A /* NLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B85253F318A0018360A /* NLUser.swift */; };
+		86F68B88253F31B40018360A /* NLProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B87253F31B40018360A /* NLProfileImage.swift */; };
+		86F68B8A253F34C60018360A /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F68B89253F34C60018360A /* UIImageView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +170,12 @@
 		86F29C9D253E654E0009A80E /* DashboardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCellViewModel.swift; sourceTree = "<group>"; };
 		86F29C9F253E696C0009A80E /* CollectionViewDataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourcePrefetching.swift; sourceTree = "<group>"; };
 		86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcePrefetching.swift; sourceTree = "<group>"; };
+		86F68B7F253F24980018360A /* NLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLImage.swift; sourceTree = "<group>"; };
+		86F68B81253F2C3A0018360A /* DomainConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
+		86F68B83253F2F570018360A /* NLUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUrls.swift; sourceTree = "<group>"; };
+		86F68B85253F318A0018360A /* NLUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUser.swift; sourceTree = "<group>"; };
+		86F68B87253F31B40018360A /* NLProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLProfileImage.swift; sourceTree = "<group>"; };
+		86F68B89253F34C60018360A /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		9756DBF58D488C20B4E3F8CF /* Pods-UnsplashMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFDBBD19E5662EEEB73CD79A /* Pods-UnsplashMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashMVVMTests/Pods-UnsplashMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C16894DF6610DBC52074490D /* Pods_UnsplashMVVM_UnsplashMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnsplashMVVM_UnsplashMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +408,7 @@
 				86A553B1253AA6AC0055FC71 /* Bindable.swift */,
 				86F29C4E253DFA0E0009A80E /* Dequeuable.swift */,
 				86F29C96253E5A180009A80E /* Descriptable.swift */,
+				86F68B81253F2C3A0018360A /* DomainConvertible.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -443,6 +456,7 @@
 				86F29C8A253E50D80009A80E /* URLRequest+Extensions.swift */,
 				86F29C8C253E517C0009A80E /* Dictionary+Extensions.swift */,
 				86F29C8E253E51990009A80E /* CharacterSet+Extensions.swift */,
+				86F68B89253F34C60018360A /* UIImageView+Kingfisher.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -458,6 +472,7 @@
 		86F29C53253DFE5C0009A80E /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				86F68B7E253F248B0018360A /* Entities */,
 				86F29C93253E55A30009A80E /* FeedResults */,
 				86F29C78253E49CD0009A80E /* DataSources */,
 				86F29C82253E4B200009A80E /* Services */,
@@ -582,6 +597,17 @@
 				86F29CA1253E698C0009A80E /* DataSourcePrefetching.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		86F68B7E253F248B0018360A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				86F68B7F253F24980018360A /* NLImage.swift */,
+				86F68B83253F2F570018360A /* NLUrls.swift */,
+				86F68B85253F318A0018360A /* NLUser.swift */,
+				86F68B87253F31B40018360A /* NLProfileImage.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		E5099FB7E03B5361F0E837B8 /* Frameworks */ = {
@@ -836,8 +862,10 @@
 			files = (
 				86F29C4F253DFA0E0009A80E /* Dequeuable.swift in Sources */,
 				86A553A4253A9B4B0055FC71 /* NavigationHandler.swift in Sources */,
+				86F68B8A253F34C60018360A /* UIImageView+Kingfisher.swift in Sources */,
 				86A553B9253AAD320055FC71 /* ProfileAssembly.swift in Sources */,
 				86A553AC253AA3770055FC71 /* DashboardCoordinator.swift in Sources */,
+				86F68B86253F318A0018360A /* NLUser.swift in Sources */,
 				86F29C77253E48E60009A80E /* DataSourceAssembly.swift in Sources */,
 				86A5535E253A7FDC0055FC71 /* DashboardViewController.swift in Sources */,
 				86F29C95253E55B00009A80E /* NLImageResult.swift in Sources */,
@@ -854,13 +882,16 @@
 				86F29C59253DFEA10009A80E /* DLImage.swift in Sources */,
 				86F29C5D253E009E0009A80E /* DLUser.swift in Sources */,
 				86A553B2253AA6AC0055FC71 /* Bindable.swift in Sources */,
+				86F68B84253F2F570018360A /* NLUrls.swift in Sources */,
 				86A553B4253AA8110055FC71 /* DashboardViewModel.swift in Sources */,
+				86F68B82253F2C3A0018360A /* DomainConvertible.swift in Sources */,
 				86F29C52253DFD7A0009A80E /* ListViewState.swift in Sources */,
 				86F29C63253E040C0009A80E /* DLImageUseCaseProtocol.swift in Sources */,
 				86F29C68253E121C0009A80E /* VerticalFlowLayout.swift in Sources */,
 				86F29CA2253E698C0009A80E /* DataSourcePrefetching.swift in Sources */,
 				86F29C73253E337A0009A80E /* PLImageRemoteDataSourceProtocol.swift in Sources */,
 				86F29C8D253E517C0009A80E /* Dictionary+Extensions.swift in Sources */,
+				86F68B80253F24980018360A /* NLImage.swift in Sources */,
 				86F29C65253E04B00009A80E /* DLUseCaseProviderProtocol.swift in Sources */,
 				86F29C8B253E50D80009A80E /* URLRequest+Extensions.swift in Sources */,
 				86F29C6E253E323A0009A80E /* PLRemoteDataSourceProtocol.swift in Sources */,
@@ -869,6 +900,7 @@
 				86F29C4D253DF9D80009A80E /* UICollectionView+Extensions.swift in Sources */,
 				86A553A6253A9BB40055FC71 /* HandlerAssembly.swift in Sources */,
 				86A553BD253AADCF0055FC71 /* ProfileCoordinator.swift in Sources */,
+				86F68B88253F31B40018360A /* NLProfileImage.swift in Sources */,
 				86F29C97253E5A180009A80E /* Descriptable.swift in Sources */,
 				86F29C87253E4FC90009A80E /* NLImageProvider.swift in Sources */,
 				86F29C9E253E654E0009A80E /* DashboardCellViewModel.swift in Sources */,

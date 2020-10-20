@@ -41,7 +41,12 @@ DashboardCollectionViewCellProtocol {
     // MARK: - Bindables
     
     private func setupBindables() {
-        // Code
+        guard let viewModel = viewModel else { return }
+        
+        if let coverURL = viewModel.coverURL {
+            let imageURL = URL(string: coverURL)
+            self.coverImageView.setImage(with: imageURL)
+        }
     }
     
 }

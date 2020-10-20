@@ -21,7 +21,9 @@ final class NLImageRemoteDataSource: PLImageRemoteDataSourceProtocol {
             switch result {
             case .success(let images):
                 guard let imagesResult = images else { return }
-                // let images = imagesResult.
+                let images = imagesResult.map { $0.asDomain() }
+                completion(.success(images))
+                
             case .failure(let error):
                 completion(.failure(error))
             }

@@ -29,12 +29,11 @@ extension NLAPIClient {
                 completion?(nil, .requestFailed)
                 return
             }
+            
             if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
                 if let data = data {
                     do {
                         let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        
                         let genericModel = try decoder.decode(decodingType, from: data)
                         completion?(genericModel, nil)
                     } catch {
@@ -54,6 +53,7 @@ extension NLAPIClient {
     func fetch<T: Decodable>(with request: URLRequest,
                              decode: @escaping (Decodable) -> T?,
                              completion: @escaping (Result<T, NLAPIError>) -> Void) {
+        
         let task = decodingTask(with: request, decodingType: T.self) { (json, error) in
             DispatchQueue.main.async {
                 guard let json = json else {

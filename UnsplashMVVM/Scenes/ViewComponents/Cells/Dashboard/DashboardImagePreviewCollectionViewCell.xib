@@ -30,7 +30,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="150" height="150"/>
             <connections>
-                <outlet property="coverImage" destination="svb-db-A8q" id="pAW-qp-Ge4"/>
+                <outlet property="coverImageView" destination="svb-db-A8q" id="mkj-xw-50D"/>
             </connections>
             <point key="canvasLocation" x="-37.681159420289859" y="156.02678571428569"/>
         </collectionViewCell>

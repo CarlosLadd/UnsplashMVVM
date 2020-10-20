@@ -10,10 +10,12 @@ import Foundation
 
 struct NLImageResult: Decodable {
     
-    let results: [Int]
+    let results: [NLImage]
     
-    private enum CodingKeys: String, CodingKey {
-        case results
+    init(from decoder: Decoder) throws {
+        var container = try decoder.unkeyedContainer()
+        
+        results = try container.decode([NLImage].self)
     }
     
 }
