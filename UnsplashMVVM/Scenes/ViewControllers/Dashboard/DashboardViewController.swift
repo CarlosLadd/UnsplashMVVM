@@ -8,7 +8,10 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, Storyboarded {
+    
+    // Storyboard
+    static var storyboardName: String = "Dashboard"
     
     // Constants
     let previewCellHeight: Double = 150.0
@@ -21,9 +24,10 @@ class DashboardViewController: UIViewController {
     weak var coordinator: DashboardCoordinatorProtocol?
 
     // Images CollectionView
-    private var collectionView: UICollectionView!
+    @IBOutlet weak var imagesCollectionView: UICollectionView!
     private var dataSource: SimpleCollectionViewDataSource<DashboardCellViewModelProtocol>!
     private var prefetchDataSource: CollectionViewDataSourcePrefetching!
+    private var displayedCellsIndexPaths = Set<IndexPath>()
     
     private var presentationMode: PresentationMode = .preview
     
@@ -44,25 +48,20 @@ class DashboardViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        imagesCollectionView.delegate = self
+        imagesCollectionView.registerNib(cellType: DashboardImagePreviewCollectionViewCell.self)
+        
         let previewLayoutWidth = previewCellHeight / imageAspectRatio
         let previewLayout = VerticalFlowLayout(width: previewLayoutWidth, height: previewCellHeight)
         previewLayout.scrollDirection = .vertical
         
-        collectionView = UICollectionView(
-            frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height),
-            collectionViewLayout: previewLayout)
-        collectionView.isScrollEnabled = true
-        collectionView.backgroundColor = .white
-        collectionView.isPrefetchingEnabled = true
-        collectionView.delegate = self
-        collectionView.registerNib(cellType: DashboardImagePreviewCollectionViewCell.self)
-        
-        view.addSubview(collectionView)
+        imagesCollectionView.collectionViewLayout = previewLayout
     }
     
     private func reloadCollectionView() {
-        guard let viewModel = viewModel else { return }
+        print(#function)
         
+        guard let viewModel = viewModel else { return }
         dataSource = SimpleCollectionViewDataSource.make(for: viewModel.imageCells,
                                                          presentationMode: presentationMode)
         
@@ -73,9 +72,10 @@ class DashboardViewController: UIViewController {
                 self?.viewModel.getImages()
         })
         
-        collectionView.dataSource = dataSource
-        collectionView.prefetchDataSource = prefetchDataSource
-        collectionView.reloadData()
+        imagesCollectionView.dataSource = dataSource
+        imagesCollectionView.prefetchDataSource = prefetchDataSource
+        
+        imagesCollectionView.reloadData()
     }
     
     // MARK: - Current State of the view
@@ -86,13 +86,13 @@ class DashboardViewController: UIViewController {
         switch state {
         case .populated, .paging, .initial:
             backgroundView.backgroundColor = .clear
-            collectionView.backgroundView = backgroundView
+            imagesCollectionView.backgroundView = backgroundView
         case .empty:
             backgroundView.backgroundColor = .darkGray
-            collectionView.backgroundView = UIView(frame: .zero)
+            imagesCollectionView.backgroundView = UIView(frame: .zero)
         case .error:
-            backgroundView.backgroundColor = .blue
-            collectionView.backgroundView = UIView(frame: .zero)
+            backgroundView.backgroundColor = .black
+            imagesCollectionView.backgroundView = UIView(frame: .zero)
         }
     }
     
@@ -124,8 +124,13 @@ class DashboardViewController: UIViewController {
 
 extension DashboardViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        // Code
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        if !displayedCellsIndexPaths.contains(indexPath) {
+            displayedCellsIndexPaths.insert(indexPath)
+            CollectionViewCellAnimator.fadeAnimate(cell: cell)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

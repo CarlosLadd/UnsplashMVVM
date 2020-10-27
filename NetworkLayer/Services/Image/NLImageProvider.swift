@@ -35,7 +35,7 @@ extension NLImageProvider: NLEndpoint {
         switch self {
         case .getImages(let page):
             return ["page": page,
-                    "per_page": 10]
+                    "per_page": 20]
         }
     }
     

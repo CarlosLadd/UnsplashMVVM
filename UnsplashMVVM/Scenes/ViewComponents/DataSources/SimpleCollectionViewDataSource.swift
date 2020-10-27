@@ -30,6 +30,8 @@ final class SimpleCollectionViewDataSource<ViewModel>: NSObject, UICollectionVie
     // MARK: - Collection view data source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("CELLS COUNT: \(cellViewModels.count)")
+        
         return cellViewModels.count
     }
     

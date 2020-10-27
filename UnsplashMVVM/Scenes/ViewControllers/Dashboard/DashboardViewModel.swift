@@ -19,7 +19,7 @@ final class DashboardViewModel: DashboardViewModelProtocol {
     // MARK: Computed Properties
     
     var needsPrefetch: Bool {
-        return false
+        return viewState.value.needsPrefetch
     }
     
     private var images: [DLImage] {
@@ -27,6 +27,7 @@ final class DashboardViewModel: DashboardViewModelProtocol {
     }
     
     var imageCells: [DashboardCellViewModelProtocol] {
+        print("RENDERING **********")
         return images.compactMap { DashboardCellViewModel($0) }
     }
     
@@ -71,12 +72,12 @@ final class DashboardViewModel: DashboardViewModelProtocol {
                                      currentImages: [DLImage]) -> ListViewState<DLImage> {
         var allImages = currentPage == 1 ? [] : currentImages
         allImages.append(contentsOf: images)
+        
         guard !allImages.isEmpty else { return .empty }
         
-        if allImages.isEmpty {
+        if images.isEmpty {
             return .populated(allImages)
-        }
-        else {
+        } else {
             return .paging(allImages, next: currentPage + 1)
         }
     }

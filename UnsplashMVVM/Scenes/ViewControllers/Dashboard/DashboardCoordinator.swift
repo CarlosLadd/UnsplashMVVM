@@ -23,7 +23,7 @@ final class DashboardCoordinator: NSObject, DashboardCoordinatorProtocol, Coordi
     // MARK: - Coordinator Delegate
     
     func start() {
-        let viewcontroller = DashboardViewController()
+        let viewcontroller = DashboardViewController.instantiate()
         
         viewcontroller.viewModel = DIContainer.shared.resolve()
         viewcontroller.coordinator = self

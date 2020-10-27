@@ -19,6 +19,7 @@ final class DashboardCellViewModel: DashboardCellViewModelProtocol {
     let coverURL: URL?
     
     init(_ image: DLImage) {
+        print("IMAGE ID: \(image.id)")
         coverURL = URL(string: image.urls.small)
     }
     
